@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <!-- Implement from below -->
+
   <body>
     <header>
       <img
@@ -30,6 +30,21 @@
     <div class="container-fluid">
       <p class="subtitle-text"><em> The fresh choice of UT! </em></p>
     </div>
+
+    <div id="foodOrderPopup" style="background-color: white; width: 70vw; position: absolute; right: 15vw; 
+    border-style:solid; border-radius: 20px; padding: 20px;
+    border-width: 2px; border-color: black;"
+    class="hidden"
+    >
+      <b>This page says</b>
+      <br>
+      <div style="text-align: center;">Order placed!</div>
+      <div style="text-align: center;" id="foodOrder">Order placed!</div>
+      <button class="order-btn" id ="OK">
+        OK
+      </button>
+    </div>
+
     <div class="row">
       <div class="item">
           <img
@@ -46,9 +61,13 @@
             $5
           </div>
         </div>
-        <div style="text-align: left">        
-          <button class="order-btn">
-            order
+        <div class="buttonContainer">        
+          <button class="round-btn" id="minus1">
+            -
+          </button>
+          <div class="inline" id="count1">0</div>
+          <button class="round-btn" id="plus1">
+            +
           </button>
         </div>
 
@@ -70,9 +89,13 @@
           $17
         </div>
       </div>
-      <div style="text-align: left">        
-        <button class="order-btn">
-          order
+      <div class="buttonContainer">        
+        <button class="round-btn" id="minus2">
+          -
+        </button>
+        <div class="inline" id="count2">0</div>
+        <button class="round-btn" id="plus2">
+          +
         </button>
       </div>
     </div>
@@ -94,9 +117,13 @@
         $6
       </div>
     </div>
-    <div style="text-align: left">        
-      <button class="order-btn">
-        order
+    <div class="buttonContainer">        
+      <button class="round-btn" id="minus3">
+        -
+      </button>
+      <div class="inline" id="count3">0</div>
+      <button class="round-btn" id="plus3">
+        +
       </button>
     </div>
   </div>
@@ -118,9 +145,13 @@
       $49
     </div>
   </div>
-  <div style="text-align: left">        
-    <button class="order-btn">
-      order
+  <div class="buttonContainer">        
+    <button class="round-btn" id="minus4">
+      -
+    </button>
+    <div class="inline" id="count4">0</div>
+    <button class="round-btn" id="plus4">
+      +
     </button>
   </div>
 </div>
@@ -128,7 +159,20 @@
 
 </div>
     </div>
-
-
+    <div style="display: inline-block; padding-left: 13vw;">
+    <div id="subtotal" style=" display: inline-block; padding-right: 13vw;">
+      Subtotal $0
+    </div>
+    
+    <button class="order-btn" id ="placeOrder">
+      order
+    </button>
+    <button class="order-btn" id="clearAll" style="background-color: gray;">
+      clear all
+    </button>
+  </div>
+    <script src="script.js"></script>
   </body>
+    <!-- Implement from below -->
+
 </html>
