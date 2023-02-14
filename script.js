@@ -109,9 +109,13 @@ function placeOrder(){
     item2 > 0 ? orderText += item2 + ' roasted fish ' : ''
     item3 > 0 ? orderText += item3 + ' chocolate stew ' : ''
     item4 > 0 ? orderText += item4 + ' black hot dog ' : ''
-    document.getElementById("orderPlaced").innerHTML = "Order placed!"
-    document.getElementById("foodOrder").innerHTML = orderText
+    if ((item1 + item2 + item3 + item4) != 0){
+        document.getElementById("orderPlaced").innerHTML = "Order placed!"
+        document.getElementById("foodOrder").innerHTML = orderText
+        document.getElementById("foodOrderPopup").classList.remove("hidden")
+    }
     document.getElementById("foodOrderPopup").classList.remove("hidden")
+
 } 
 
 function OK(){
